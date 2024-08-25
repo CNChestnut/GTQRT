@@ -1,0 +1,28 @@
+{
+  "name": "gtrqt",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon ./server/main.mjs",
+    "front-dev": "vite",
+    "front-build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@varlet/ui": "^3.3.16",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3",
+    "vite": "^5.4.2",
+    "nodemon": "^3.1.4",
+    "@varlet/import-resolver": "^3.3.16",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4"
+  }
+}

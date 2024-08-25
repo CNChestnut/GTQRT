@@ -1,0 +1,77 @@
+[
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapCHS.json",
+    "lang": "CHS",
+    "name": "简体中文"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapCHT.json",
+    "lang": "CHT",
+    "name": "繁體中文"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapDE.json",
+    "lang": "DE",
+    "name": "Deutsch"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapEN.json",
+    "lang": "EN",
+    "name": "English"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapES.json",
+    "lang": "ES",
+    "name": "Español"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapFR.json",
+    "lang": "FR",
+    "name": "Français"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapID.json",
+    "lang": "ID",
+    "name": "Bahasa Indonesia"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapIT.json",
+    "lang": "IT",
+    "name": "Italiano"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapJP.json",
+    "lang": "JP",
+    "name": "日本語"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapKR.json",
+    "lang": "KR",
+    "name": "한국어"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapPT.json",
+    "lang": "PT",
+    "name": "Português"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapRU.json",
+    "lang": "RU",
+    "name": "Русский"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapTH.json",
+    "lang": "TH",
+    "name": "ไทย"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapTR.json",
+    "lang": "TR",
+    "name": "Türkçe"
+  },
+  {
+    "url": "https://github.com/DimbreathBot/AnimeGameData/raw/master/TextMap/TextMapVI.json",
+    "lang": "VI",
+    "name": "Tiếng Việt"
+  }
+]

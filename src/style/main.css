@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Genshin";
+    src: url('/Genshin.ttf');
+}
+
+@font-face {
+    font-family: "HSR";
+    src: url('/HSR.ttf');
+}
+
+* {
+    font-family: "Genshin", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html[data-font="HSR"] {
+    span,
+    p,
+    h1,
+    h3,
+    button,
+    input,
+    div,
+    li {
+        font-family: "HSR", sans-serif;
+    }
+}
