@@ -1,6 +1,6 @@
 import express from "express";
-import path from 'path'
-const __dirname = import.meta.dirname
+import path from "path";
+const __dirname = import.meta.dirname;
 import cors from "cors";
 import Query from "./query.mjs";
 import { _log } from "./core.mjs";
@@ -39,18 +39,17 @@ const server = app.listen(52102, () => {
 `);
 });
 
-app.use('/', express.static(path.resolve(__dirname, '../dist')))
+app.use("/", express.static(path.resolve(__dirname, "../dist")));
 
 app.get("/server/", (req, res) => {
   const start = new Date().getTime();
   const queryString = req.query.q;
   const queryLanguage = [JSON.parse(req.query.lang)];
-  let translateLanguage
-  if (req.query['translate-mode']) {
+  let translateLanguage;
+  if (req.query["translate-mode"]) {
     translateLanguage = JSON.parse(req.query.translate);
-  }
-  else{
-    translateLanguage = []
+  } else {
+    translateLanguage = [];
   }
   const allLanguage = queryLanguage.concat(translateLanguage);
   for (let language of allLanguage) {
@@ -60,15 +59,15 @@ app.get("/server/", (req, res) => {
   let texts = [];
   keys.forEach((key) => {
     let text = {
-        languageName: languageMap[queryLanguage[0]],
-        text:query.getStringByKey(key, queryLanguage)
+      languageName: languageMap[queryLanguage[0]],
+      text: query.getStringByKey(key, queryLanguage),
     };
     let translation = {};
     for (let language of translateLanguage) {
       translation[language] = {
         languageName: languageMap[language],
-        text:query.getStringByKey(key, language)
-    };
+        text: query.getStringByKey(key, language),
+      };
     }
     texts.push({
       id: key,
@@ -82,4 +81,10 @@ app.get("/server/", (req, res) => {
     time: new Date().getTime() - start,
   });
   _log("LOG - main.mjs", "Response sent, length: " + keys.length);
+});
+
+app.get("/server/query-base", (req, res) => {
+  res.send({
+    texts: query.queryBase(req.query.q),
+  });
 });

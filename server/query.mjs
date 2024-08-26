@@ -13,14 +13,38 @@ class Query {
 
   load(language) {
     if (!this[language]) {
-      this[language] = JSON.parse(
-        fs.readFileSync(
-          path.resolve(__dirname, `../text-map/TextMap${language}.json`),
-          "utf-8"
-        )
-      );
-      _log('LOG - query.mjs','Loading language: ' + language);
+      if (language == "BASE") {
+        this[language] = JSON.parse(
+          fs.readFileSync(
+            path.resolve(__dirname, `../text-map/base.json`),
+            "utf-8"
+          )
+        );
+      } else {
+        this[language] = JSON.parse(
+          fs.readFileSync(
+            path.resolve(__dirname, `../text-map/TextMap${language}.json`),
+            "utf-8"
+          )
+        );
+      }
+      _log("LOG - query.mjs", "Loading language: " + language);
     }
+  }
+
+  queryBase(string) {
+    this.load("BASE");
+    let result = [];
+    for (let index in this.BASE) {
+      if (this.BASE[index]?.["en"]?.includes(string)) {
+        result.push(this.BASE[index]);
+      } else if (this.BASE[index]?.["ja"]?.includes(string)) {
+        result.push(this.BASE[index]);
+      } else if (this.BASE[index]?.["zhCN"]?.includes(string)) {
+        result.push(this.BASE[index]);
+      }
+    }
+    return result;
   }
 
   searchString(string, language) {
